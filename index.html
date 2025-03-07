@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Agent Name Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Secret Agent Name Generator</h1>
+    <button onclick="getAgentName()">Get My Agent Name</button>
+    <p id="result"></p>
+
+    <script>
+        let agentNames = [
+            "Shadow Falcon", "Crimson Viper", "Ghost Whisper", "Steel Mirage", "Echo Specter",
+            "Midnight Phantom", "Ivory Lynx", "Silver Serpent", "Rogue Titan", "Neon Cipher",
+            "Blaze Revenant", "Silent Lotus", "Vortex Striker", "Lunar Tempest", "Onyx Wraith",
+            "Cyber Phantom", "Storm Reaper", "Scarlet Mantis", "Iron Echo", "Zenith Hunter",
+            "Obsidian Viper", "Nightshade Nova", "Cobalt Phantom", "Inferno Specter", "Drift Phantom",
+            "Omega Striker", "Dagger Wraith", "Shadow Eclipse", "Eclipse Tempest", "Storm Sentinel",
+            "Titan Mirage", "Stealth Enigma", "Ivory Phoenix", "Crimson Cobra", "Thunder Shroud",
+            "Vortex Revenant", "Neon Specter", "Silver Sabre", "Midnight Cipher", "Oblivion Reaper",
+            "Echo Thunder", "Scarlet Phantom", "Void Sentinel", "Lunar Phantom", "Rogue Cipher",
+            "Ghost Titan", "Cyber Lotus", "Steel Shadow", "Zenith Specter", "Onyx Serpent"
+        ];
+        
+        function getAgentName() {
+            if (agentNames.length === 0) {
+                document.getElementById("result").innerText = "No more agent names available!";
+                return;
+            }
+            let randomIndex = Math.floor(Math.random() * agentNames.length);
+            let agentName = agentNames.splice(randomIndex, 1)[0];
+            document.getElementById("result").innerText = "Your agent name is: " + agentName;
+        }
+    </script>
+</body>
+</html>
