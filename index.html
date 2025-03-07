@@ -52,56 +52,132 @@
 
     <script>
         let clues = [
-            "I found a broken doll leg, but where’s the rest of it?",
-            "My clue is a supermarket receipt… but only one item is circled.",
-            "A half-burned movie ticket—someone didn’t want this seen.",
-            "The coffee cup had a name on it, but it wasn’t mine.",
-            "A train schedule, missing a stop that should exist.",
-            "This photograph… someone’s face is scratched out. Why?",
-            "A matchbook from a diner that hasn’t existed in years.",
-            "I have a playing card, but there’s a stain where the number should be.",
-            "The USB drive is empty. Or at least, it looks that way.",
-            "A fortune cookie slip—'Time is a loop.' What does that mean?",
-            "A hotel key with no room number. Someone didn’t want to be found.",
-            "A torn page from a comic book, but the speech bubble is missing.",
-            "A voicemail transcript… but the voice isn’t human.",
-            "A watch frozen at 3:17 AM. Was that when it all went wrong?",
-            "A napkin covered in scribbled numbers. Coordinates, maybe?",
-            "A postcard from nowhere. No return address. No sender.",
-            "A map with red ink markings. But the destination is blurred out.",
-            "A pair of sunglasses—one lens missing, like it saw too much.",
-            "A list of names. Some crossed out. One name is mine.",
-            "A vinyl record, scratched on just one song. Maybe it’s hiding something.",
-            "A typewriter ribbon with ink, but no machine to use it.",
-            "A locked diary, the key nowhere to be found.",
-            "A newspaper clipping with one paragraph blacked out.",
-            "A chess piece—knight—painted completely red.",
-            "A locket with no photo inside, but a whisper of perfume.",
-            "An old bus ticket, the date long expired.",
-            "A fortune teller’s note, but the ink is smudged.",
-            "A library card… but from a library that doesn’t exist.",
-            "A blood-stained playing dice, showing only sixes.",
-            "A child’s drawing of a house, but the windows are all blacked out.",
-            "A scratched-out postcard in a foreign country.",
-            "A digital clock stuck at 12:34, blinking endlessly.",
-            "A missing person’s flyer with your own face on it.",
-            "A coin with two heads, no tails.",
-            "A door with a peephole, but no knob.",
-            "A book with all the nouns crossed out.",
-            "A wedding invitation from a couple that never existed.",
-            "A playlist full of songs you don’t remember adding.",
-            "A security badge for a building that was torn down.",
-            "A train ticket, stamped once, with no return date.",
-            "A movie stub—only the last two letters of the title remain: 'NG'.",
-            "A chessboard mid-game, but the king is missing.",
-            "A sticky note on your door: 'You know me'.",
-            "A mirror covered in fingerprints that don’t match your own.",
-            "A scribbled note: 'Don’t trust what you see'.",
-            "A camera roll with only one photo: a blurry hand reaching toward the lens.",
-            "A sealed envelope addressed to 'The One Who Knows'.",
-            "A notebook full of names. One is circled twice.",
-            "A music sheet, but only the last note is circled.",
-            "A map with a path leading off the edge of the paper."
+          "I found a broken doll leg, but where’s the rest of it?"
+"My clue is a supermarket receipt… but only one item is circled."
+"A half-burned movie ticket—someone didn’t want this seen."
+"The coffee cup had a name on it, but it wasn’t mine."
+"A train schedule, missing a stop that should exist."
+"This photograph… someone’s face is scratched out. Why?"
+"A matchbook from a diner that hasn’t existed in years."
+"I have a playing card, but there’s a stain where the number should be."
+"The USB drive is empty. Or at least, it looks that way."
+"A fortune cookie slip—'Time is a loop.' What does that mean?"
+"A hotel key with no room number. Someone didn’t want to be found."
+"A torn page from a comic book, but the speech bubble is missing."
+"A voicemail transcript… but the voice isn’t human."
+"A watch frozen at 3:17 AM. Was that when it all went wrong?"
+"A napkin covered in scribbled numbers. Coordinates, maybe?"
+"A postcard from nowhere. No return address. No sender."
+"A map with red ink markings. But the destination is blurred out."
+"A pair of sunglasses—one lens missing, like it saw too much."
+"A list of names. Some crossed out. One name is mine."
+"A vinyl record, scratched on just one song. Maybe it’s hiding something."
+"A typewriter ribbon with ink, but no machine to use it."
+"A locked diary, the key nowhere to be found."
+"A newspaper clipping with one paragraph blacked out."
+"A chess piece—knight—painted completely red."
+"A locket with no photo inside, but a whisper of perfume."
+"An old bus ticket, the date long expired."
+"A fortune teller’s note, but the ink is smudged."
+"A library card… but from a library that doesn’t exist."
+"A blood-stained playing dice, showing only sixes."
+"A child’s drawing of a house, but the windows are all blacked out."
+"A payphone number scribbled on the back of a matchbox."
+"A puzzle piece, but no puzzle in sight."
+"A plane ticket with no departure time."
+"A street sign, but all the letters have been scratched off."
+"A cracked pocket watch, ticking backwards."
+"A silver key, but no lock to match."
+"An audio tape labeled ‘Do Not Listen’."
+"A car key with a tag that says 'Not Yours'."
+"A dusty book, every page is blank except for one word."
+"A black envelope sealed with red wax."
+"A dog collar with a name tag that doesn’t match any known dog."
+"A wedding ring, but the engraving is scratched beyond recognition."
+"A film reel, but the footage is upside down."
+"A list of rules, but number seven is torn off."
+"A cocktail napkin with 'Don't forget' scrawled on it."
+"A birthday card, signed by someone who shouldn't know your name."
+"A book missing all its even-numbered pages."
+"A corkboard pinned with newspaper headlines that never happened."
+"A coat with train tickets still in the pocket, stamped for tomorrow."
+"A pocket calendar, all but one date crossed out."
+"A torn movie poster, but the title has been replaced with your name."
+"A cassette tape labeled ‘Last Words’."
+"A page from a journal—no name, just an address."
+"A driver’s license, but the photo is of someone you’ve never seen."
+"A subway map that leads to a station that doesn’t exist."
+"A locked safe, but there’s no combination."
+"A mannequin head with a single painted tear."
+"A coded message that, when translated, just says ‘run’."
+"A coffee loyalty card, stamped all the way to 13."
+"A raincoat with no tag, damp but no sign of rain."
+"A music box that only plays static."
+"A suitcase filled with identical notebooks, each with the same single entry."
+"A teddy bear with an empty voice box."
+"A crumpled napkin with an address from two cities away."
+"A rusted lock with the key still inside."
+"A scratch-off lottery ticket where every number is the same."
+"A newspaper dated five years in the future."
+"A child’s shoe, completely clean despite being found in the mud."
+"A grocery list with 'trust no one' scrawled at the bottom."
+"A fishbowl with a single black marble inside."
+"A post-it note stuck to the mirror: 'You are not alone.'"
+"A dry fountain pen, its ink well filled with red."
+"A train ticket for a route that was discontinued years ago."
+"A milk carton with a missing person who looks familiar."
+"A phone with one voicemail, the voice whispering your name."
+"A wedding invitation from a couple that never existed."
+"A security badge for a building that was torn down."
+"A thumbprint on a piece of glass, but no source."
+"A violin case with no violin, only a single white glove."
+"A doorknob without a door."
+"A candle that flickers without wind."
+"A nametag that says ‘HELLO, MY NAME IS…’ but nothing else."
+"A house key labeled ‘For Emergencies Only’."
+"A radio playing a song that doesn’t exist."
+"A window shutter nailed closed from the inside."
+"A birthday cake with no candles, only an X on top."
+"A mirror that only reflects what’s behind you."
+"A chalkboard with the words 'It’s too late' half-erased."
+"A chain with no pendant, but a dent where one used to be."
+"A dried rose with one petal missing."
+"A baby monitor picking up a voice, but no baby around."
+"A jacket pocket filled with old playing cards, all aces."
+"A handprint on the window, but from the inside of a locked car."
+"A pair of ballet shoes with one ribbon cut."
+"A library book, long overdue, checked out in your name."
+"A deck of tarot cards—one card missing."
+"A message in a bottle… but the ink is smudged beyond reading."
+"A necklace with a locket that won’t open."
+"A shadow on the floor, but nothing casting it."
+"A suitcase with a ticket inside, but the destination is blank."
+"A newspaper with tomorrow’s date, and a missing front page."
+"A locked suitcase. The key is in your pocket."
+"A silver coin. It’s warm to the touch."
+"A letter that ends mid-sentence."
+"A sticky note on your door: 'You know me'."
+"A whisper in the wind that sounds like your name."
+"A wristwatch that never ticks past midnight."
+"A sealed envelope addressed to 'The One Who Knows'."
+"A book with the last 10 pages missing."
+"A birthday cake with candles already blown out."
+"A matchbox with one match left."
+"A pair of glasses that make everything look unfamiliar."
+"A voicemail from yourself… but it’s not your voice."
+"A train ticket. No departure time. No arrival."
+"A locked door that has never been opened."
+"A name whispered in the dark. Was it yours?"
+"A wedding ring buried in the sand."
+"A mirror that shows a different reflection."
+"A camera with one undeveloped photo left."
+"A radio station that only plays static, except at midnight."
+"A blueprint of a building that doesn’t exist."
+"A chalk outline with no crime scene."
+"A song lyric scribbled in an unfamiliar hand."
+"A coin with two heads, no tails."
+"A locked drawer. You don’t remember locking it."
+"A note that reads 'Too late'."
         ];
         
         function getClue() {
