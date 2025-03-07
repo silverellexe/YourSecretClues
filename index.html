@@ -6,36 +6,49 @@
     <title>Secret Clue Generator</title>
     <style>
         body {
-            font-family: "Courier New", monospace;
+            font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #1a1a1a;
-            color: #f5f5f5;
+            background-color: #f8f8f8;
+            color: #333;
             margin: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
         button {
             padding: 10px 20px;
             font-size: 18px;
             cursor: pointer;
-            background-color: #ffcc00;
-            color: black;
+            background-color: #007bff;
+            color: white;
             border: none;
             border-radius: 5px;
+            margin-top: 20px;
         }
         #result {
             margin-top: 20px;
-            font-size: 22px;
+            font-size: 20px;
             font-weight: bold;
-            background-color: #333;
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
-            display: inline-block;
+            display: none;
+            background: #f4f4f4;
+            color: #222;
         }
     </style>
 </head>
 <body>
-    <h1>Secret Clue Generator</h1>
-    <button onclick="getClue()">Get My Clue</button>
-    <p id="result"></p>
+    <div class="container">
+        <h1>Secret Clue Generator</h1>
+        <p>Here's your personal secret clue. Comment this on the Instagram post to build the mystery and you will receive your celebrity reveal!</p>
+        <button onclick="getClue()">Get My Unique Clue</button>
+        <p id="result"></p>
+    </div>
 
     <script>
         let clues = [
@@ -58,26 +71,22 @@
             "A map with red ink markings. But the destination is blurred out.",
             "A pair of sunglasses—one lens missing, like it saw too much.",
             "A list of names. Some crossed out. One name is mine.",
-            "A vinyl record, scratched on just one song. Maybe it’s hiding something.",
-            "A typewriter ribbon with ink, but no machine to use it.",
-            "A locked diary, the key nowhere to be found.",
-            "A newspaper clipping with one paragraph blacked out.",
-            "A chess piece—knight—painted completely red.",
-            "A locket with no photo inside, but a whisper of perfume.",
-            "An old bus ticket, the date long expired.",
-            "A fortune teller’s note, but the ink is smudged.",
-            "A library card… but from a library that doesn’t exist.",
-            "A blood-stained playing dice, showing only sixes.",
-            "A child’s drawing of a house, but the windows are all blacked out."
+            "A vinyl record, scratched on just one song. Maybe it’s hiding something."
         ];
         
         function getClue() {
-            if (clues.length === 0) {
-                clues = [...originalClues]; // Reset clues when all are used
+            let storedClue = localStorage.getItem("userClue");
+            let resultBox = document.getElementById("result");
+            
+            if (storedClue) {
+                resultBox.innerText = storedClue;
+            } else {
+                let randomIndex = Math.floor(Math.random() * clues.length);
+                let clue = clues[randomIndex];
+                localStorage.setItem("userClue", clue);
+                resultBox.innerText = clue;
             }
-            let randomIndex = Math.floor(Math.random() * clues.length);
-            let clue = clues.splice(randomIndex, 1)[0];
-            document.getElementById("result").innerText = "Here's your personal secret clue. Comment this on the Instagram post to build the mystery and you will receive your celebrity reveal!\n\n" + clue;
+            resultBox.style.display = "block";
         }
     </script>
 </body>
